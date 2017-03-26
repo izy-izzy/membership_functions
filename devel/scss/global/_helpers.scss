@@ -1,0 +1,9 @@
+@mixin strippedbackground($colour){
+	background: repeating-linear-gradient(
+		135deg,
+		rgba($colour, 0.1),
+		rgba($colour, 0.1) $margin/2,
+		rgba($colour, 0.5) $margin/2,
+		rgba($colour, 0.5) $margin
+	);
+}

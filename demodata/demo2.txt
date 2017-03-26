@@ -1,0 +1,31 @@
+[{
+"name": "A-1",
+"upperStart": 0,
+"upperTop1": 0,
+"upperTop2": 6,
+"upperEnd": 9
+},{
+"name": "A-2",
+"upperStart": 6,
+"upperTop1": 9,
+"upperTop2": 12,
+"upperEnd": 18
+},{
+"name": "A-3",
+"upperStart": 12,
+"upperTop1": 18,
+"upperTop2": 28,
+"upperEnd": 29    
+},{
+"name": "A-4",
+"upperStart": 28,
+"upperTop1": 29,
+"upperTop2": 38,
+"upperEnd": 49
+},{
+"name": "A-5",
+"upperStart": 38,
+"upperTop1": 49,
+"upperTop2": 50,
+"upperEnd": 50
+}]

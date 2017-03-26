@@ -1,0 +1,82 @@
+.membership-functions{
+
+	.function{
+		cursor: pointer;
+		padding: $margin/2 0;
+		background-color: $silver;
+
+		.box{
+			height: 50px;
+			display: block;
+			position: relative;
+			background: lighten($orange, 40%);
+
+			.part{
+				height: 100%;
+				display: block;
+				position: absolute;
+			}
+
+			.start,
+			.end{
+				@include strippedbackground($orange);
+			}
+
+			.middle{
+				background: $orange;
+			}
+		}
+
+		&.selected{
+
+			.box{
+				background: lighten($lime, 40%);
+
+				.start,
+				.end{
+					@include strippedbackground($lime);
+				}
+
+				.middle{
+					background: $lime;
+				}
+			}
+		}
+
+		&:hover{
+			.box{
+				background: lighten($gray, 65%);
+			}
+		}
+	}
+
+	.legend{
+		.tip{
+			color: $gray;
+		}
+	}
+}
+
+.function {
+	@include transition(all $transition-speed-long ease-in-out);
+
+	&.ng-animate {
+		@include transition(all $transition-speed-long ease-in-out);
+	}
+
+	&.ng-enter {
+		opacity: 0;
+
+		&.ng-enter-active {
+			opacity: 1;
+		}
+	}
+
+	&.ng-leave {
+		opacity: 1;
+
+		&.ng-leave-active {
+			opacity: 0;
+		}
+	}
+}

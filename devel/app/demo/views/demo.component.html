@@ -1,0 +1,41 @@
+<div class="container">
+	<header>
+		<div class="row">
+			<div class="col-xs-12">
+				<h1>Demo</h1>
+			</div>
+		</div>
+	</header>
+	<section>
+		<button ng-click="$ctrl.loadDataset(0)" class="btn btn-primary margin-bottom-half margin-right-half" ng-disabled="$ctrl.isLoading">Data Set 0</button>
+		<button ng-click="$ctrl.loadDataset(1)" class="btn btn-primary margin-bottom-half margin-right-half" ng-disabled="$ctrl.isLoading">Data Set 1</button>
+		<button ng-click="$ctrl.loadDataset(2)" class="btn btn-primary margin-bottom-half margin-right-half" ng-disabled="$ctrl.isLoading">Data Set 2</button>
+		<button ng-click="$ctrl.loadDataset(3)" class="btn btn-primary margin-bottom-half margin-right-half" ng-disabled="$ctrl.isLoading">Data Set (empty)</button>
+		<button ng-click="$ctrl.loadDataset(4)" class="btn btn-primary margin-bottom-half margin-right-half" ng-disabled="$ctrl.isLoading">Data Set (error loading data)</button>
+		<div class="row">
+			<div class="col-xs-12">
+				<h2>
+					Membership functions
+					<span ng-if="$ctrl.isLoading"> 
+						<i class="fa fa-spinner fa-pulse"></i>
+					</span>
+				</h2>
+				<div ng-if="$ctrl.loadingDataFailed">
+					<div class="alert alert-danger">
+						<strong>Error!</strong> There has been an error during loading data.
+					</div>
+				</div>
+				<div>
+					<membership-functions membership-functions="$ctrl.membershipFunctionsData" selected-function="$ctrl.membershipFunctionsSelectedData"></membership-functions>
+				</div>
+			</div>
+		</div>
+		<hr/>
+		<hr/>
+		<p>
+			Selected Function: 
+			<strong e2e="selectedFunction">{{$ctrl.membershipFunctionsSelectedData.name}}</strong>
+		</p>
+	</section>
+	
+</div>

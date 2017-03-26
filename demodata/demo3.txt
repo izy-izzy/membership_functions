@@ -1,0 +1,13 @@
+[{
+"name": "Negative-A",
+"upperStart": -25,
+"upperTop1": -18,
+"upperTop2": -14,
+"upperEnd": -7    
+},{
+"name": "Positive-A",
+"upperStart": -14,
+"upperTop1": -7,
+"upperTop2": 25,
+"upperEnd": 35
+}]

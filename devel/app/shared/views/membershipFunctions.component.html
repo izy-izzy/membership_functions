@@ -1,0 +1,38 @@
+<div class="membership-functions">
+	<div 	class="row function" 
+			ng-class="{'selected': membershipFunctionController.isFunctionSelected(function)}"
+			ng-repeat="function in membershipFunctionController.processedMembershipFunctions">
+		<div class="col-xs-12 full-tooltip">
+			<div 	ng-click="membershipFunctionController.selectFunction(function)"
+			tooltips tooltip-template="{{function.upperStart | number}} | <strong>{{function.upperTop1 | number}} | {{function.upperTop2 | number}}</strong> | {{function.upperEnd | number}}" >
+				<small class="name">{{function.name}}</small> 
+				<i class="fa fa-check color-lime" aria-hidden="true" ng-if="membershipFunctionController.isFunctionSelected(function)"></i>
+				<div class="box animated-all">
+					<div 	class="part start animated-all" 
+							ng-style="{'left': function.start*100 + '%', 'width':(function.middleOne - function.start) * 100 + '%'}">
+					</div>
+					<div class="part middle animated-all" ng-style="{'left': function.middleOne * 100+ '%', 'width':(function.middleTwo - function.middleOne) * 100 + '%'}">
+					</div>
+					<div class="part end animated-all" ng-style="{'left': function.middleTwo * 100+ '%', 'width':(function.end - function.middleTwo) * 100 + '%'}">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div ng-if="membershipFunctionController.processedMembershipFunctions.length < 1">
+		<div class="alert alert-info">
+			<strong>Sorry!</strong> There are no data to show.
+		</div>
+	</div>
+	<div class="legend" ng-if="membershipFunctionController.processedMembershipFunctions.length > 0">
+		<hr/>
+		<div class="tip pull-left">
+			{{membershipFunctionController.statistics.minimum | number}}
+		</div>
+		<div class="tip pull-right">
+			{{membershipFunctionController.statistics.maximum | number}}
+		</div>
+	</div>
+</div>
+
+
