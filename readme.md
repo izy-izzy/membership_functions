@@ -3,7 +3,7 @@ Application in Angular 1.6 that reads Membership functions and shows them as bar
 
 ## Installation and start
 ```
-npm run setup
+npm run setup (tested on Windows10)
 node httpserver.js (for local HTTP server)
 ```
 
